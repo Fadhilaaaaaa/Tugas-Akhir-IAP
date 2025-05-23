@@ -1,0 +1,49 @@
+[
+    {
+        "nama": "Ramelsi",
+        "umur": 21,
+        "nim": "2217020052",
+        "lulus": "true",
+        "hobi": [
+            "singing",
+            "sleeping"
+        ],
+        "pembimbing" : {
+            "pembimbing 1" : "Haditya Prasetyo",
+            "pembimbing 2" : "sularno"
+        }
+        
+    },
+
+    {
+        "nama": "Fadhila",
+        "umur": 22,
+        "nim": "2217020052",
+        "lulus": "true",
+        "hobi": [
+            "programming",
+            "sleeping"
+        ],
+        "pembimbing" : {
+            "pembimbing 1" : "Haditya Prasetyo",
+            "pembimbing 2" : "sularno"
+        }
+        
+    },
+
+    {
+        "nama": "Shennanore",
+        "umur": 22,
+        "nim": "2217020050",
+        "lulus": "true",
+        "hobi": [
+            "singing",
+            "dancing"
+        ],
+        "pembimbing" : {
+            "pembimbing 1" : "Haditya Prasetyo",
+            "pembimbing 2" : "sularno"
+        }
+        
+    }
+]
