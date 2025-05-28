@@ -23,6 +23,24 @@ $result = get_CURL($urlLatestVideo);
 $LatestVideoId = $result['items']['0']['id']['videoId'];
 
 
+//instagram API
+$clientID = "17841408003182534";
+$accessToken = "IGAA8aPVQwxodBZAE1hTC1iaUtnUlpBYlREcEtkZAm5SLTVTdE1YSFM2ekF3dFlBT1J2WGJxbU5FWU1OMGlET0hHNWNzS3lhX0xpVW93b3JHRzdqS0NnTE9PejA3VGdqUGhXUW93dlk5WXdVRlBEcFdtSDBBVVdtVEF3N19MTDZAycwZDZD";
+
+$result2 = get_Curl("https://graph.instagram.com/v22.0/me?fields=username,profile_picture_url,followers_count&access_token=IGAA8aPVQwxodBZAE1hTC1iaUtnUlpBYlREcEtkZAm5SLTVTdE1YSFM2ekF3dFlBT1J2WGJxbU5FWU1OMGlET0hHNWNzS3lhX0xpVW93b3JHRzdqS0NnTE9PejA3VGdqUGhXUW93dlk5WXdVRlBEcFdtSDBBVVdtVEF3N19MTDZAycwZDZD");
+
+$usernameIG = $result2['username'];
+$profilePictureIG = $result2['profile_picture_url'];
+$followersIG = $result2['followers_count'];
+
+//media IG
+$resultGambar1 = get_Curl("https://graph.instagram.com/v22.0/18032368870790318?fields=media_url&access_token=IGAA8aPVQwxodBZAE1hTC1iaUtnUlpBYlREcEtkZAm5SLTVTdE1YSFM2ekF3dFlBT1J2WGJxbU5FWU1OMGlET0hHNWNzS3lhX0xpVW93b3JHRzdqS0NnTE9PejA3VGdqUGhXUW93dlk5WXdVRlBEcFdtSDBBVVdtVEF3N19MTDZAycwZDZD");
+$resultGambar2 = get_Curl("https://graph.instagram.com/v22.0/18063861145089034?fields=media_url&access_token=IGAA8aPVQwxodBZAE1hTC1iaUtnUlpBYlREcEtkZAm5SLTVTdE1YSFM2ekF3dFlBT1J2WGJxbU5FWU1OMGlET0hHNWNzS3lhX0xpVW93b3JHRzdqS0NnTE9PejA3VGdqUGhXUW93dlk5WXdVRlBEcFdtSDBBVVdtVEF3N19MTDZAycwZDZD");
+
+
+$gambar1 = $resultGambar1['media_url'];
+$gambar2 = $resultGambar2['media_url'];
+
 ?>
 
 
@@ -137,24 +155,21 @@ $LatestVideoId = $result['items']['0']['id']['videoId'];
       <div class="col-md-5">
         <div class="row">
           <div class="col-md-4">
-            <img src="img/profile1.png" width="100" class="rounded-circle img-thumbnail">
-          </div>
+            <img src="<?= $profilePictureIG; ?>" width="200" class="rounded-circle img-thumbnail">
+          </div>          
           <div class="col-md-8">
-            <h5>Instagram</h5>
-            <p>10000 Followers</p>
+            <h5><?= $usernameIG ?></h5>
+            <p><?= $followersIG ?> Followers.</p>
           </div>
         </div>
 
         <div class="row mt-3 pb-3">
           <div class="col">
             <div class="ig-thumbnail">
-              <img src="img/thumbs/1.png" class="img-fluid rounded">
+              <img src="<?= $gambar1; ?>">
             </div>
             <div class="ig-thumbnail">
-              <img src="img/thumbs/2.png" class="img-fluid rounded">
-            </div>
-            <div class="ig-thumbnail">
-              <img src="img/thumbs/3.png" class="img-fluid rounded">
+              <img src="<?= $gambar2; ?>">
             </div>
           </div>
         </div>

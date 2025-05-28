@@ -14,7 +14,7 @@ class Mahasiswa extends REST_Controller {
         $this->load->model('Mahasiswa_model', 'mahasiswa');
 
 
-        $this->methods['index_get']['limit'] = 10;
+        $this->methods['index_get']['limit'] = 50;
 
         
     }
